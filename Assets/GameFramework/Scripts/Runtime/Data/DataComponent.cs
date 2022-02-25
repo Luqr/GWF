@@ -120,7 +120,6 @@ namespace UnityGameFramework.Runtime
         }
 
         public void PreLoadAllData()
-
         {
             m_DataManager.PreLoadAllData();
         }

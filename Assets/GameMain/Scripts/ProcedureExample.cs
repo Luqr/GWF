@@ -16,9 +16,23 @@ namespace Flower
             Log.Warning(welcomeMessage);
             Log.Error(welcomeMessage);
 
+            PreloadResources();
             GameEntry.Data.LoadAllData();
         }
 
+        private void PreloadResources()
+        {
+            // Preload configs
+            LoadConfig("DefaultConfig");
+
+            GameEntry.Data.PreLoadAllData();
+        }
+
+        private void LoadConfig(string configName)
+        {
+            string configAssetName = AssetUtility.GetConfigAsset(configName, false);
+            GameEntry.Config.ReadData(configAssetName, this);
+        }
 
     }
 }
