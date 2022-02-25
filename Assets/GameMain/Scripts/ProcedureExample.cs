@@ -3,7 +3,7 @@ using GameFramework.Procedure;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace GameFrameworkExample
+namespace Flower
 {
     public class ProcedureExample : ProcedureBase
     {
@@ -15,6 +15,10 @@ namespace GameFrameworkExample
             Log.Info(welcomeMessage);
             Log.Warning(welcomeMessage);
             Log.Error(welcomeMessage);
+
+            GameEntry.Data.LoadAllData();
         }
+
+
     }
 }
