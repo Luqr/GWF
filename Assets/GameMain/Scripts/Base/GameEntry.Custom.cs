@@ -26,13 +26,15 @@ namespace Flower
             Data = UnityGameFramework.Runtime.GameEntry.GetComponent<DataComponent>();
         }
 
+
+
+        // Todo:Luqr Test Code
         public void Update()
         {
-            if(Input.GetKeyDown(KeyCode.C))
+            if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.C))
             {
                 GameEntry.Sound.PlayMusic(EnumSound.GameBGM);
             }
         }
-
     }
 }
